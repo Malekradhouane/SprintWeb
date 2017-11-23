@@ -79,7 +79,7 @@ public function affichercoursspeedAction(Request $request){
         $paginator=$this->get('knp_paginator');
      $result = $paginator->paginate(
         $coursautoecole, /* query NOT result */
-        $request->query->getInt('page'),
+        $request->query->getInt('page',1),
          $request->query->getInt('limit', 2)
 
     );
@@ -102,7 +102,7 @@ public function affichercoursspeedAction(Request $request){
         $paginator=$this->get('knp_paginator');
         $result = $paginator->paginate(
             $coursautoecole, /* query NOT result */
-            $request->query->getInt('page'),
+            $request->query->getInt('page',1),
             $request->query->getInt('limit', 2)  );
         return $this->render('AutoEcoleBundle:Default:coursroad.html.twig',['coursautoecole'=>$result,]);
 
@@ -119,7 +119,7 @@ public function affichercoursspeedAction(Request $request){
         $paginator=$this->get('knp_paginator');
         $result = $paginator->paginate(
             $coursautoecole, /* query NOT result */
-            $request->query->getInt('page'),
+            $request->query->getInt('page',1),
             $request->query->getInt('limit', 2)  );
 
         return $this->render('AutoEcoleBundle:Default:courstrafic.html.twig',['coursautoecole'=>$result,]);

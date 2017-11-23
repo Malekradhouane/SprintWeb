@@ -24,8 +24,11 @@ class AppKernel extends Kernel
             new ActualiteBundle\ActualiteBundle(),
             new AnnonceBundle\AnnonceBundle(),
             new AutoEcoleBundle\AutoEcoleBundle(),
+
             new Vich\UploaderBundle\VichUploaderBundle(),
 
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

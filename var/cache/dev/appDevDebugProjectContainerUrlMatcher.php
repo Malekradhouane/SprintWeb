@@ -101,13 +101,100 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/a')) {
-            // auto_ecole_homepage
-            if (rtrim($pathinfo, '/') === '/auto') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'auto_ecole_homepage');
+            if (0 === strpos($pathinfo, '/auto')) {
+                // auto_ecole_homepage
+                if (rtrim($pathinfo, '/') === '/auto') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'auto_ecole_homepage');
+                    }
+
+                    return array (  '_controller' => 'AutoEcoleBundle\\Controller\\DefaultController::indexAction',  '_route' => 'auto_ecole_homepage',);
                 }
 
-                return array (  '_controller' => 'AutoEcoleBundle\\Controller\\DefaultController::indexAction',  '_route' => 'auto_ecole_homepage',);
+                if (0 === strpos($pathinfo, '/auto/a')) {
+                    // autoecole_layout
+                    if ($pathinfo === '/auto/autoecole') {
+                        return array (  '_controller' => 'AutoEcoleBundle\\Controller\\DefaultController::layoutAction',  '_route' => 'autoecole_layout',);
+                    }
+
+                    if (0 === strpos($pathinfo, '/auto/ajout')) {
+                        // autoecole_ajout
+                        if ($pathinfo === '/auto/ajoutcours') {
+                            return array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::ajoutcoursAction',  '_route' => 'autoecole_ajout',);
+                        }
+
+                        // autoecole_ajouttest
+                        if ($pathinfo === '/auto/ajouttest') {
+                            return array (  '_controller' => 'AutoEcoleBundle\\Controller\\TestController::ajouttestAction',  '_route' => 'autoecole_ajouttest',);
+                        }
+
+                    }
+
+                }
+
+                if (0 === strpos($pathinfo, '/auto/cours')) {
+                    // autoecole_affichercoursspeed
+                    if ($pathinfo === '/auto/coursspeed') {
+                        return array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::affichercoursspeedAction',  '_route' => 'autoecole_affichercoursspeed',);
+                    }
+
+                    // autoecole_affichercourstrafic
+                    if ($pathinfo === '/auto/courstrafic') {
+                        return array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::affichercourstraficAction',  '_route' => 'autoecole_affichercourstrafic',);
+                    }
+
+                    // autoecole_affichercours
+                    if ($pathinfo === '/auto/coursroad') {
+                        return array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::affichercoursroadAction',  '_route' => 'autoecole_affichercours',);
+                    }
+
+                    // autoecole_affichercoursall
+                    if ($pathinfo === '/auto/coursall') {
+                        return array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::affichercoursallAction',  '_route' => 'autoecole_affichercoursall',);
+                    }
+
+                }
+
+                // delete_cours
+                if (0 === strpos($pathinfo, '/auto/Deletecours') && preg_match('#^/auto/Deletecours/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_cours')), array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::deletecoursAction',));
+                }
+
+                // update_cours
+                if (0 === strpos($pathinfo, '/auto/Update') && preg_match('#^/auto/Update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'update_cours')), array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::updatecoursAction',));
+                }
+
+                // autoecole_affichertest
+                if ($pathinfo === '/auto/test') {
+                    return array (  '_controller' => 'AutoEcoleBundle\\Controller\\TestController::affichertestAction',  '_route' => 'autoecole_affichertest',);
+                }
+
+                // delete_test
+                if (0 === strpos($pathinfo, '/auto/Deletetest') && preg_match('#^/auto/Deletetest/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_test')), array (  '_controller' => 'AutoEcoleBundle\\Controller\\TestController::deletetestAction',));
+                }
+
+                // update_test
+                if (0 === strpos($pathinfo, '/auto/Updatetest') && preg_match('#^/auto/Updatetest/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'update_test')), array (  '_controller' => 'AutoEcoleBundle\\Controller\\TestController::updatetestAction',));
+                }
+
+                // note_test
+                if ($pathinfo === '/auto/note') {
+                    return array (  '_controller' => 'AutoEcoleBundle\\Controller\\DefaultController::noteAction',  '_route' => 'note_test',);
+                }
+
+                // pdf
+                if ($pathinfo === '/auto/pdf') {
+                    return array (  '_controller' => 'AutoEcoleBundle\\Controller\\ModelController::pdfAction',  '_route' => 'pdf',);
+                }
+
+                // autoecole_affichertestsall
+                if ($pathinfo === '/auto/testadmin') {
+                    return array (  '_controller' => 'AutoEcoleBundle\\Controller\\TestController::affichertestallAction',  '_route' => 'autoecole_affichertestsall',);
+                }
+
             }
 
             if (0 === strpos($pathinfo, '/annonce')) {

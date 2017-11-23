@@ -1064,14 +1064,29 @@ nav.navbar {
 	3.1. Banner
 -------------------------------*/
 .banner-section {
-  background-image: url("../images/banner-image.jpg");
+  background-image: url("../images/banner-image-1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 160px 0;
   position: relative;
 }
-
+.cc-section {
+    background: url("../images/cropped-cropped-golf-auto-ecole2.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 160px 0;
+    position: relative;
+}
+.banner-section1::after {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 7px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
 
 .banner-section::after {
   background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
@@ -1085,6 +1100,9 @@ nav.navbar {
 }
 .banner_content {
   padding-left: 120px;
+}
+.banner_content1 {
+    padding-left: 120px;
 }
 .banner_content h1 {
   color: #ffffff;

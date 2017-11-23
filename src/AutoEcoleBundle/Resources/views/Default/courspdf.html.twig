@@ -1,14 +1,28 @@
 
-<h4>Karhabty</h4>
+
 <img width="900" height="1000" src="file:///C:/Users/MALEK/Desktop/PDFIM.PNG"  alt="">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
+<div class="section-header text-center">
+    <h2>Tunisian Road Code </h2>
+</div>
 {% for coursautoecole in coursautoecole %}
     <br>
     <br>
-    <h2>{{ coursautoecole.type }}</h2>
+    <h3>{{ coursautoecole.type }}</h3>
     <br>
     <br>
-    {{ coursautoecole.cours }}
-
+    <div class="section-header text-center">
+    <span>{{ coursautoecole.cours }}</span>
+    </div>
 {% endfor %}
