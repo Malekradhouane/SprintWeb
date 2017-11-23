@@ -21,20 +21,20 @@ class __TwigTemplate_7531814d082e211dbc2fcb1dec7760be5898521f357d80f9ac198559215
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d6e69d1cc50c2cbe8091e5b9def49b77f1bf35e7443167f935cd53e32f6aeeac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_d6e69d1cc50c2cbe8091e5b9def49b77f1bf35e7443167f935cd53e32f6aeeac->enter($__internal_d6e69d1cc50c2cbe8091e5b9def49b77f1bf35e7443167f935cd53e32f6aeeac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KarhabtyBundle:Registration:check_email.html.twig"));
+        $__internal_4ac3d6770fb1cfa1c36ab5efd029c7238dad1b5dc51d1ba284480f852a19e4fb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4ac3d6770fb1cfa1c36ab5efd029c7238dad1b5dc51d1ba284480f852a19e4fb->enter($__internal_4ac3d6770fb1cfa1c36ab5efd029c7238dad1b5dc51d1ba284480f852a19e4fb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KarhabtyBundle:Registration:check_email.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d6e69d1cc50c2cbe8091e5b9def49b77f1bf35e7443167f935cd53e32f6aeeac->leave($__internal_d6e69d1cc50c2cbe8091e5b9def49b77f1bf35e7443167f935cd53e32f6aeeac_prof);
+        $__internal_4ac3d6770fb1cfa1c36ab5efd029c7238dad1b5dc51d1ba284480f852a19e4fb->leave($__internal_4ac3d6770fb1cfa1c36ab5efd029c7238dad1b5dc51d1ba284480f852a19e4fb_prof);
 
     }
 
     // line 5
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_5b3e563c81904275060d06d6afc159cf5fd5161435e5409e840f022706213fa5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5b3e563c81904275060d06d6afc159cf5fd5161435e5409e840f022706213fa5->enter($__internal_5b3e563c81904275060d06d6afc159cf5fd5161435e5409e840f022706213fa5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_8e3ec90d05e59706d7bc7e526973e9ea6f255a67b056971ea50e31e6ac1344be = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_8e3ec90d05e59706d7bc7e526973e9ea6f255a67b056971ea50e31e6ac1344be->enter($__internal_8e3ec90d05e59706d7bc7e526973e9ea6f255a67b056971ea50e31e6ac1344be_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 6
         echo "    <p>";
@@ -42,7 +42,7 @@ class __TwigTemplate_7531814d082e211dbc2fcb1dec7760be5898521f357d80f9ac198559215
         echo "</p>
 ";
         
-        $__internal_5b3e563c81904275060d06d6afc159cf5fd5161435e5409e840f022706213fa5->leave($__internal_5b3e563c81904275060d06d6afc159cf5fd5161435e5409e840f022706213fa5_prof);
+        $__internal_8e3ec90d05e59706d7bc7e526973e9ea6f255a67b056971ea50e31e6ac1344be->leave($__internal_8e3ec90d05e59706d7bc7e526973e9ea6f255a67b056971ea50e31e6ac1344be_prof);
 
     }
 
@@ -78,6 +78,6 @@ class __TwigTemplate_7531814d082e211dbc2fcb1dec7760be5898521f357d80f9ac198559215
 {% block fos_user_content %}
     <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
 {% endblock fos_user_content %}
-", "KarhabtyBundle:Registration:check_email.html.twig", "C:\\wamp64\\www\\ProjetKarhabtyBase2\\src\\KarhabtyBundle/Resources/views/Registration/check_email.html.twig");
+", "KarhabtyBundle:Registration:check_email.html.twig", "C:\\wamp64\\www\\SprintWeb\\src\\KarhabtyBundle/Resources/views/Registration/check_email.html.twig");
     }
 }

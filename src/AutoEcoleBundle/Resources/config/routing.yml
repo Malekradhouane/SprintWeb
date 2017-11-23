@@ -1,3 +1,52 @@
 auto_ecole_homepage:
     path:     /
     defaults: { _controller: AutoEcoleBundle:Default:index }
+
+
+autoecole_layout:
+    path:     /autoecole
+    defaults: { _controller: AutoEcoleBundle:Default:layout }
+
+
+autoecole_ajout:
+    path:     /ajoutcours
+    defaults: { _controller: AutoEcoleBundle:Model:ajoutcours }
+autoecole_ajouttest:
+    path:     /ajouttest
+    defaults: { _controller: AutoEcoleBundle:Test:ajouttest }
+autoecole_affichercoursspeed:
+    path:     /coursspeed
+    defaults: { _controller: AutoEcoleBundle:Model:affichercoursspeed }
+autoecole_affichercourstrafic:
+    path:     /courstrafic
+    defaults: { _controller: AutoEcoleBundle:Model:affichercourstrafic }
+autoecole_affichercours:
+    path:     /coursroad
+    defaults: { _controller: AutoEcoleBundle:Model:affichercoursroad }
+autoecole_affichercoursall:
+    path:     /coursall
+    defaults: { _controller: AutoEcoleBundle:Model:affichercoursall }
+delete_cours:
+    path: /Deletecours/{id}
+    defaults: { _controller: AutoEcoleBundle:Model:deletecours }
+update_cours:
+    path: /Update/{id}
+    defaults: { _controller: AutoEcoleBundle:Model:updatecours }
+autoecole_affichertest:
+    path:     /test
+    defaults: { _controller: AutoEcoleBundle:Test:affichertest }
+delete_test:
+    path: /Deletetest/{id}
+    defaults: { _controller: AutoEcoleBundle:Test:deletetest }
+update_test:
+    path: /Updatetest/{id}
+    defaults: { _controller: AutoEcoleBundle:Test:updatetest }
+note_test:
+    path:     /note
+    defaults: { _controller: AutoEcoleBundle:Default:note }
+pdf:
+    path:     /pdf
+    defaults: { _controller: AutoEcoleBundle:Model:pdf }
+autoecole_affichertestsall:
+    path:     /testadmin
+    defaults: { _controller: AutoEcoleBundle:Test:affichertestall }

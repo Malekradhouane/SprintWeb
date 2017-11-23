@@ -15,8 +15,8 @@ class __TwigTemplate_ee4362c75267b0d2534fc1f83f45b7349737ca697e5790895939f5d27ac
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e4e40bce3e813e52a26580d81985728a5ad42f50752abfe15c09455b8ead825d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e4e40bce3e813e52a26580d81985728a5ad42f50752abfe15c09455b8ead825d->enter($__internal_e4e40bce3e813e52a26580d81985728a5ad42f50752abfe15c09455b8ead825d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KarhabtyBundle:Group:show_content.html.twig"));
+        $__internal_ef2356e3d26426f745933ae54cb0414b2d51bdbe954427373c8dcb45f9590c71 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ef2356e3d26426f745933ae54cb0414b2d51bdbe954427373c8dcb45f9590c71->enter($__internal_ef2356e3d26426f745933ae54cb0414b2d51bdbe954427373c8dcb45f9590c71_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KarhabtyBundle:Group:show_content.html.twig"));
 
         // line 2
         echo "
@@ -30,7 +30,7 @@ class __TwigTemplate_ee4362c75267b0d2534fc1f83f45b7349737ca697e5790895939f5d27ac
 </div>
 ";
         
-        $__internal_e4e40bce3e813e52a26580d81985728a5ad42f50752abfe15c09455b8ead825d->leave($__internal_e4e40bce3e813e52a26580d81985728a5ad42f50752abfe15c09455b8ead825d_prof);
+        $__internal_ef2356e3d26426f745933ae54cb0414b2d51bdbe954427373c8dcb45f9590c71->leave($__internal_ef2356e3d26426f745933ae54cb0414b2d51bdbe954427373c8dcb45f9590c71_prof);
 
     }
 
@@ -64,6 +64,6 @@ class __TwigTemplate_ee4362c75267b0d2534fc1f83f45b7349737ca697e5790895939f5d27ac
 <div class=\"fos_user_group_show\">
     <p>{{ 'group.show.name'|trans }}: {{ group.getName() }}</p>
 </div>
-", "KarhabtyBundle:Group:show_content.html.twig", "C:\\wamp64\\www\\ProjetKarhabtyBase2\\src\\KarhabtyBundle/Resources/views/Group/show_content.html.twig");
+", "KarhabtyBundle:Group:show_content.html.twig", "C:\\wamp64\\www\\SprintWeb\\src\\KarhabtyBundle/Resources/views/Group/show_content.html.twig");
     }
 }

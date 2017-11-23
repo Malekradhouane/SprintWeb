@@ -1,0 +1,216 @@
+{% extends '::base.html.twig' %}
+
+{% block Title %}
+    Welcome - Karhabty
+{% endblock %}
+
+     {% block Sheets %}
+         {{ parent() }}
+         <!--Bootstrap -->
+         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css">
+         <!--Custome Style -->
+         <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+         <!--OWL Carousel slider-->
+         <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css">
+         <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}" type="text/css">
+         <!--slick-slider -->
+         <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
+         <!--bootstrap-slider -->
+         <link href="{{ asset('css/bootstrap-slider.min.css') }}" rel="stylesheet">
+         <!--FontAwesome Font Style -->
+         <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+
+
+     {% endblock %}
+
+
+{% block PageHeader %}
+
+    <!-- Banners -->
+
+    <section  class="cc-section">
+        <div class="container">
+            <div class="div_zindex">
+                <div class="row">
+                    <div class="col-12">
+                            <div class="card">
+                                <!-- .left-right-aside-column-->
+                                <div class="contact-page-aside">
+                                    <!-- .left-aside-column-->
+                                    <div class="left-aside bg-light-part">
+                    <div class="col-md-5 col-md-push-7">
+                        <div class="banner_content1">
+
+                            <h1>Learning to drive .</h1>
+                            <p><strong>Check out the Tunisian Road Code below and get ready to nail your learner's test</strong> </p>
+                        </div>
+                    </div>
+                                    </div>
+                            </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Banners -->
+
+{% endblock %}
+
+{% block Content %}
+
+
+
+    <!-- About -->
+    <section class="about-us-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Tunisian Road Code </h2>
+                <p>Select a chapter from the Road Code and work your way through the units. Each time you complete a unit or a chapter we'll update your progress.
+                </p>
+            </div>
+            <div class="row text-center">
+                <img src="{{ asset('images/Module-Icons-1.8-JS-Your-licence.png') }}" alt="Image" />
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <form name="myform">
+                    {% for testautoecole in testautoecole %}
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <img src="{{ asset('images/'~testautoecole.path) }}" alt="">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+
+
+                            <H1>{{ testautoecole.questions }}</H1>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                    <section title=".squaredThree">
+                        <!-- .squaredThree -->
+                        <div class="squaredThree">
+
+                            <input type="checkbox" name ="chech" value = "1" data-toggle="modal" data-target="#todo"  /> {{ testautoecole.fausse2 }} <br>
+                            <input type="checkbox" name ="chech" value = "2" /> {{ testautoecole.reponses }} <br>
+                            <input type="checkbox" name ="chech" value = "3" /> {{ testautoecole.fausse1 }} <br>
+                            <input type="checkbox" name ="chech" value = "4" /> {{ testautoecole.fausse3 }} <br>
+
+                        </div>
+                        <!-- end .squaredThree -->
+                    </section>
+                {% if (testautoecole.idtest==4) %}
+                    <button type="button" onclick ="dothis()" class="btn" data-toggle="modal" data-target="#todo">Valider </button> </div>
+            {% elseif (testautoecole.idtest==5) %}
+            <button type="button" onclick ="dothis5()" class="btn" data-toggle="modal" data-target="#todo">Valider </button> </div>
+
+        {% endif %}
+
+
+                    {% endfor %}
+                </form>
+            <div class=" navigation text-center ">
+                {{ knp_pagination_render(testautoecole) }}
+
+
+            </div>
+
+
+
+                    <div id="todo" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <from class="form-horizontal form-material">
+                                        <div class="form-group">
+
+                                            <div class="col-md-12 m-b-20">
+                                                <h5 class="modal-title" id="myModalLabel">Votre Note Est : </h5><br>
+                                                <h5 class="modal-title" id="myModalLabel"  ></h5><br>
+
+                                            </div>
+
+                                        </div>
+                                    </from>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+
+
+
+
+
+            </div>
+        </div>
+        <div class="text-right">
+            <ul class="pagination"> </ul>
+            <li class="footable-page-arrow disabled"><a data-page="last" href="#1">»</a></li>
+        </div>
+
+    </section>
+
+    <!-- /About -->
+    <!-- About -->
+
+
+    <!-- /About -->
+
+
+
+
+    <!-- /Blog-->
+
+{% endblock %}
+
+{% block Script %}
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/interface.js') }}"></script>
+    <!--bootstrap-slider-JS-->
+    <script src="{{ asset('js/bootstrap-slider.min.js') }}"></script>
+    <!--Slider-JS-->
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/test.js') }}"></script>
+
+
+{% endblock %}
+
+
+
+

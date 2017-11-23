@@ -1,0 +1,118 @@
+{% extends '::base.html.twig' %}
+
+{% block Title %}
+    Welcome - Karhabty
+{% endblock %}
+
+     {% block Sheets %}
+         {{ parent() }}
+         <!--Bootstrap -->
+         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css">
+         <!--Custome Style -->
+         <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+         <!--OWL Carousel slider-->
+         <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css">
+         <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}" type="text/css">
+         <!--slick-slider -->
+         <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
+         <!--bootstrap-slider -->
+         <link href="{{ asset('css/bootstrap-slider.min.css') }}" rel="stylesheet">
+         <!--FontAwesome Font Style -->
+         <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+     {% endblock %}
+
+
+{% block PageHeader %}
+
+    <!-- Banners -->
+    <section  class="cc-section">
+        <div class="container">
+            <div class="div_zindex">
+                <div class="row">
+                    <div class="col-md-5 col-md-push-7">
+                        <div class="banner_content1">
+
+                            <h1>Learning to drive .</h1>
+                            <p><strong>Check out the Tunisian Road Code below and get ready to nail your learner's test</strong> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Banners -->
+
+{% endblock %}
+
+{% block Content %}
+
+
+
+    <!-- About -->
+    <section class="about-us-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Tunisian Road Code </h2>
+                <p>Select a chapter from the Road Code and work your way through the units. Each time you complete a unit or a chapter we'll update your progress.
+                </p>
+            </div>
+            <div class="row text-center">
+                         <img src="{{ asset('images/Module-Icons-1.8-JS-Traffic-lights.png') }}" alt="Image" />
+
+
+                    </div>
+                </div>
+
+    </section>
+
+    <!-- /About -->
+    <!-- About -->
+    <section id="courstrafic" class="about-us-section section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+
+                {% for coursautoecole in coursautoecole %}
+                    <br>
+                    <br>
+                   {# <a href="{{ asset('') }}{{ coursautoecole.Path }}">Télécharger</a>#}
+                    <img src="{{ asset('') }}{{ coursautoecole.Path }}" alt="Image" />
+
+
+                    <br>
+                    <br>
+                    {{ coursautoecole.cours }}
+
+                {% endfor %}
+            </div>
+        </div>
+        <div class=" navigation text-center ">
+            {{ knp_pagination_render(coursautoecole) }}
+        </div>
+
+    </section>
+
+    <!-- /About -->
+
+
+
+
+
+{% endblock %}
+
+{% block Script %}
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/interface.js') }}"></script>
+    <!--bootstrap-slider-JS-->
+    <script src="{{ asset('js/bootstrap-slider.min.js') }}"></script>
+    <!--Slider-JS-->
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+
+{% endblock %}
+
+
+
+

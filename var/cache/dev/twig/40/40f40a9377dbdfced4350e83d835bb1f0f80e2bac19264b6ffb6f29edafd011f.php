@@ -15,8 +15,8 @@ class __TwigTemplate_2a31fa9e451f12ec4a81439a9437ab38bd8170964d5885113882f14a95c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_420b98f22959d5482118abb2e30d927553a427d0255dbaaad147902e952f7d7b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_420b98f22959d5482118abb2e30d927553a427d0255dbaaad147902e952f7d7b->enter($__internal_420b98f22959d5482118abb2e30d927553a427d0255dbaaad147902e952f7d7b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Karhabty/Group/show_content.html.twig"));
+        $__internal_9d1e9b51a44ae2442014d95dff9e5647d4d03a34a039d557c574a67a927b3287 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9d1e9b51a44ae2442014d95dff9e5647d4d03a34a039d557c574a67a927b3287->enter($__internal_9d1e9b51a44ae2442014d95dff9e5647d4d03a34a039d557c574a67a927b3287_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Karhabty/Group/show_content.html.twig"));
 
         // line 2
         echo "
@@ -30,7 +30,7 @@ class __TwigTemplate_2a31fa9e451f12ec4a81439a9437ab38bd8170964d5885113882f14a95c
 </div>
 ";
         
-        $__internal_420b98f22959d5482118abb2e30d927553a427d0255dbaaad147902e952f7d7b->leave($__internal_420b98f22959d5482118abb2e30d927553a427d0255dbaaad147902e952f7d7b_prof);
+        $__internal_9d1e9b51a44ae2442014d95dff9e5647d4d03a34a039d557c574a67a927b3287->leave($__internal_9d1e9b51a44ae2442014d95dff9e5647d4d03a34a039d557c574a67a927b3287_prof);
 
     }
 
@@ -64,6 +64,6 @@ class __TwigTemplate_2a31fa9e451f12ec4a81439a9437ab38bd8170964d5885113882f14a95c
 <div class=\"fos_user_group_show\">
     <p>{{ 'group.show.name'|trans }}: {{ group.getName() }}</p>
 </div>
-", "@Karhabty/Group/show_content.html.twig", "C:\\wamp64\\www\\ProjetKarhabtyBase2\\src\\KarhabtyBundle\\Resources\\views\\Group\\show_content.html.twig");
+", "@Karhabty/Group/show_content.html.twig", "C:\\wamp64\\www\\SprintWeb\\src\\KarhabtyBundle\\Resources\\views\\Group\\show_content.html.twig");
     }
 }

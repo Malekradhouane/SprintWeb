@@ -16,8 +16,8 @@ class __TwigTemplate_a52a9c806a7941cf4c49462577c04ca8bbe17c9273976d96f1c9efb20a4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_aa896baee358c316526dbf3a84853c41824157b0323b400e9b614819f5258544 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_aa896baee358c316526dbf3a84853c41824157b0323b400e9b614819f5258544->enter($__internal_aa896baee358c316526dbf3a84853c41824157b0323b400e9b614819f5258544_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KarhabtyBundle:Registration:register.html.twig"));
+        $__internal_47a56a8f1fb6a6167588fb7d0130db9c862917f5b2291b18acd962aa18148194 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_47a56a8f1fb6a6167588fb7d0130db9c862917f5b2291b18acd962aa18148194->enter($__internal_47a56a8f1fb6a6167588fb7d0130db9c862917f5b2291b18acd962aa18148194_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KarhabtyBundle:Registration:register.html.twig"));
 
         // line 1
         echo "
@@ -26,14 +26,14 @@ class __TwigTemplate_a52a9c806a7941cf4c49462577c04ca8bbe17c9273976d96f1c9efb20a4
         // line 3
         $this->displayBlock('registration_content', $context, $blocks);
         
-        $__internal_aa896baee358c316526dbf3a84853c41824157b0323b400e9b614819f5258544->leave($__internal_aa896baee358c316526dbf3a84853c41824157b0323b400e9b614819f5258544_prof);
+        $__internal_47a56a8f1fb6a6167588fb7d0130db9c862917f5b2291b18acd962aa18148194->leave($__internal_47a56a8f1fb6a6167588fb7d0130db9c862917f5b2291b18acd962aa18148194_prof);
 
     }
 
     public function block_registration_content($context, array $blocks = array())
     {
-        $__internal_ee5beeecc9ea34ea488a242c7a7d033a4c059428e57ba91ee779b0354b4d32a4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ee5beeecc9ea34ea488a242c7a7d033a4c059428e57ba91ee779b0354b4d32a4->enter($__internal_ee5beeecc9ea34ea488a242c7a7d033a4c059428e57ba91ee779b0354b4d32a4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "registration_content"));
+        $__internal_43b43446fd4b3728cd04e7a1e8c4f6dda26cbd00962c4221d2b4e7c0203080f9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_43b43446fd4b3728cd04e7a1e8c4f6dda26cbd00962c4221d2b4e7c0203080f9->enter($__internal_43b43446fd4b3728cd04e7a1e8c4f6dda26cbd00962c4221d2b4e7c0203080f9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "registration_content"));
 
         // line 4
         echo "    <div class=\"modal fade\" id=\"signupform\">
@@ -71,7 +71,7 @@ class __TwigTemplate_a52a9c806a7941cf4c49462577c04ca8bbe17c9273976d96f1c9efb20a4
 
 ";
         
-        $__internal_ee5beeecc9ea34ea488a242c7a7d033a4c059428e57ba91ee779b0354b4d32a4->leave($__internal_ee5beeecc9ea34ea488a242c7a7d033a4c059428e57ba91ee779b0354b4d32a4_prof);
+        $__internal_43b43446fd4b3728cd04e7a1e8c4f6dda26cbd00962c4221d2b4e7c0203080f9->leave($__internal_43b43446fd4b3728cd04e7a1e8c4f6dda26cbd00962c4221d2b4e7c0203080f9_prof);
 
     }
 
@@ -129,6 +129,6 @@ class __TwigTemplate_a52a9c806a7941cf4c49462577c04ca8bbe17c9273976d96f1c9efb20a4
 
 
 {% endblock registration_content  %}
-", "KarhabtyBundle:Registration:register.html.twig", "C:\\wamp64\\www\\ProjetKarhabtyBase2\\src\\KarhabtyBundle/Resources/views/Registration/register.html.twig");
+", "KarhabtyBundle:Registration:register.html.twig", "C:\\wamp64\\www\\SprintWeb\\src\\KarhabtyBundle/Resources/views/Registration/register.html.twig");
     }
 }
