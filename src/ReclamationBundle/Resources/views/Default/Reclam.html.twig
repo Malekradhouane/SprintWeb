@@ -1,0 +1,276 @@
+{% extends ':default:base2.html.twig' %}
+
+{% block tite %}    <title> Page Admin</title>  {% endblock %}
+
+{% block sheets %}
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Admin Pro Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ asset('admin/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Footable CSS -->
+    <link href="{{ asset('admin/assets/plugins/footable/css/footable.core.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/assets/plugins/bootstrap-select/bootstrap-select.min.css') }}" rel="stylesheet" />
+    <!-- Page CSS -->
+    <link href="{{ asset('admin/css/pages/contact-app-page.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/pages/footable-page.css') }}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <!-- You can change the theme colors from here -->
+    <link href="{{ asset('admin/css/colors/default-dark.css') }}" id="theme" rel="stylesheet">
+{% endblock %}
+
+{% block BreadCrumb %}
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Administration</h3>
+        </div>
+        <div class="col-md-7 align-self-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active">Claims</li>
+            </ol>
+        </div>
+        <div class="">
+            <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+{% endblock %}
+
+{% block container %}
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <!-- .left-right-aside-column-->
+                <div class="contact-page-aside">
+                    <!-- .left-aside-column-->
+                    <div class="left-aside bg-light-part">
+                        <ul class="list-style-none">
+                            <li class="box-label"><a href="javascript:void(0)">All Claims <span></span></a></li>
+                            <li class="divider"></li>
+
+                            <li><a href="javascript:void(0)">Technique <span></span></a></li>
+                            <li><a href="javascript:void(0)">Used Cars <span></span></a></li>
+                            <li><a href="javascript:void(0)">New Cars <span></span></a></li>
+                            <li><a href="javascript:void(0)">Others <span></span></a></li>
+                            <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">Add Lable</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <from class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Name of Label</label>
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control" placeholder="type name"> </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-12">Select Number of people</label>
+                                                    <div class="col-md-12">
+                                                        <select class="form-control">
+                                                            <option>All Contacts</option>
+                                                            <option>10</option>
+                                                            <option>20</option>
+                                                            <option>30</option>
+                                                            <option>40</option>
+                                                            <option>Custome</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </from>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- /.left-aside-column-->
+                    <div class="right-aside ">
+                        <div class="right-page-header">
+                            <div class="d-flex">
+                                <div class="align-self-center">
+                                    <h4 class="card-title m-t-10"> Claims List </h4></div>
+                                <div class="ml-auto">
+                                    <input type="text" id="demo-input-search2" placeholder="search Claim" class="form-control"> </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="demo-foo-addrow" class="table m-t-30 table-hover no-wrap contact-list" data-page-size="10">
+                                <thead>
+                                <tr>
+                                    <th>Claim_id</th>
+                                    <th>Object of the Claim</th>
+                                    <th type="date">Sending Date</th>
+                                    <th>Details</th>
+                                    <th>Handling</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                    <!--
+                                    <td>
+                                        <a href="app-contact-detail.html"><img src="../assets/images/users/1.jpg" alt="user" class="img-circle" /> Genelia Deshmukh</a>
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-original-title="Delete"><i class="ti-close" aria-hidden="true"></i></button>
+                                    </td>-->
+                                    {% for rec in reclams %}
+
+                                    <tr>
+                                        <td style="width:50px;" align="center"><span class="action-icons">{{ rec.idReclamation }}</span></td>
+                                        <td align="center"><span class="label label-light-danger label-icon">{{ rec.sujet }}</span></td>
+                                        <td align="center"><span class="label label-themecolor label-icon">{{ rec.dateReclamation | date("y-m-d") }}</span></td>
+
+                                        <td >
+                                            <button type="button" class="btn btn-block btn-outline-success fa fa-check-square-o" data-toggle="modal"
+                                                    data-target=" #add-contact" > Show Details</button>
+                                            <div id="add-contact"  class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel">Claims List</h4>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <from class="form-horizontal form-material">
+                                                                <div class="form-group">
+
+                                                                    <div class="col-md-12 m-b-20">
+                                                                        <label type="text" class="form-control" placeholder="Type name"> Date d'envoi : </label>
+
+                                                                    </div>
+                                                                    <div class="col-md-12 m-b-20">
+                                                                        <label type="text" class="form-control" placeholder="Type name"> Objet : </label>
+                                                                        <label type="text" class="form-control" placeholder="Type name"> </label>
+                                                                    </div>
+                                                                    <div class="col-md-12 m-b-20">
+                                                                        <label type="text" class="form-control" placeholder="Type name"> Description : </label>
+                                                                        <label type="text" class="form-control" placeholder="Type name">  </label>
+
+                                                                    </div>
+                                                                    <div class="col-md-12 m-b-20">
+                                                                        <label type="text" class="form-control" placeholder="Type name"> Etat: </label>
+                                                                        <label type="text" class="form-control" placeholder="Type name"> </label>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </from>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+
+                                                <!-- /.modal-dialog -->
+                                            </div>
+
+                                        </td>
+                                        <td >
+                                            <button type="button" class="btn btn-block btn-outline-warning fa fa-plus" data-toggle="modal" data-target="#todo"> Add to 'To Do List</button>
+                                        </td>
+                                        <td><a href="{{ path('reclamation_Suppback',{'id':rec.idReclamation} ) }}">X</a></td>
+                                    </tr>
+                                    {% endfor %}
+
+                                </tbody>
+                                <tfoot>
+                                <tr>
+
+
+                                    <div id="todo" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title" id="myModalLabel">ADD TASK : </h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <from class="form-horizontal form-material">
+                                                        <div class="form-group">
+
+                                                                <div class="col-md-12 m-b-20">
+                                                                    <h5 class="modal-title" id="myModalLabel">TO DO : </h5><br>
+                                                                    <textarea type="text" class="form-control" placeholder="TO DO"> </textarea></div>
+
+
+                                                        </div>
+                                                    </from>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                            <!-- /.modal-content -->
+                                        </div>
+                                        <!-- /.modal-dialog -->
+                                    </div>
+                                    <td colspan="7">
+                                        <div class="text-right">
+                                            <ul class="pagination"> </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tfoot>
+
+                            </table>
+                        </div>
+                        <!-- .left-aside-column-->
+                    </div>
+                </div>
+                    <!-- /.left-right-aside-column-->
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ asset('admin/assets/plugins/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{{ asset('admin/assets/plugins/bootstrap/js/popper.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{{ asset('admin/js/perfect-scrollbar.jquery.min.js') }}"></script>
+    <!--Wave Effects -->
+    <script src="{{ asset('admin/js/waves.js') }}"></script>
+    <!--Menu sidebar -->
+    <script src="{{ asset('admin/js/sidebarmenu.js') }}"></script>
+    <!--stickey kit -->
+    <script src="{{ asset('admin/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
+    <!--Custom JavaScript -->
+    <script src="{{ asset('admin/js/custom.min.js') }}"></script>
+    <!-- Footable -->
+    <script src="{{ asset('admin/assets/plugins/footable/js/footable.all.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/bootstrap-select/bootstrap-select.min.js') }}" type="text/javascript"></script>
+    <!--FooTable init-->
+    <script src="{{ asset('admin/js/footable-init.js') }}"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="{{ asset('admin/assets/plugins/styleswitcher/jQuery.style.switcher.js') }}"></script>
+{% endblock %}

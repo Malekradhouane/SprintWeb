@@ -1,0 +1,34 @@
+template_homepage:
+    path:     /index
+    defaults: { _controller: TemplateBundle:Default:index }
+
+template_layout:
+    path:     /layout
+    defaults: { _controller: TemplateBundle:Default:layout }
+template_AbouUs:
+    path:     /about
+    defaults: { _controller: TemplateBundle:Default:AboutUs }
+template_Admin:
+    path:     /admin
+    defaults: { _controller: TemplateBundle:Default:admin }
+recherche_annonce:
+    path:     /recAnn
+    defaults: { _controller: TemplateBundle:Default:aman }
+template_client:
+    path:     /client
+    defaults: { _controller: TemplateBundle:Default:client}
+afficher_new:
+    path:      /new
+    defaults: { _controller: AnnonceBundle:Default:affichenew}
+afficher_old:
+    path:      /old
+    defaults: { _controller: AnnonceBundle:Default:afficheold}
+afficher_oldC:
+    path:      /oldcl
+    defaults: { _controller: AnnonceBundle:Default:afficheoldCL}
+afficher_newC:
+    path:      /newcl
+    defaults: { _controller: AnnonceBundle:Default:affichenewCL}
+tout_annonceC:
+    path:    /affichetoutC
+    defaults: { _controller: AnnonceBundle:Default:afficheCl}

@@ -1,0 +1,39 @@
+annonce_homepage:
+    path:     /
+    defaults: { _controller: AnnonceBundle:Default:index }
+ajout_annonce:
+    path:     /ajoutannonce
+    defaults: { _controller: AnnonceBundle:Modele:ajoutannonce }
+gerer_annonce:
+    path:     /manageannonce
+    defaults: { _controller: AnnonceBundle:Modele:interfaceAnnonce}
+ajout_annonceneuve:
+    path:     /ajoutannonceneuve
+    defaults: { _controller: AnnonceBundle:Modele:ajoutannonceneuve}
+afficher_annonces:
+    path:     /afficherannonce
+    defaults: { _controller: AnnonceBundle:Modele:list}
+message:
+    path:     /message
+    defaults: { _controller: AnnonceBundle:Default:message}
+consulter_annonce:
+    path:     /consultAnn
+    defaults: { _controller: AnnonceBundle:Modele:consulter}
+annonce_admin:
+    path:     /annadmin
+    defaults: { _controller: AnnonceBundle:Modele:annAdmin}
+count_notification:
+    path:     /count
+    defaults: { _controller: AnnonceBundle:Modele:query}
+accept_annonce:
+    path:     /accAnn/{id}
+    defaults: { _controller: AnnonceBundle:Modele:Accept}
+delete_annonce:
+    path:     /delAnn/{id}
+    defaults: { _controller: AnnonceBundle:Modele:delete}
+refuse_annonce:
+    path:     /refAnn/{id}
+    defaults: { _controller: AnnonceBundle:Modele:refuse}
+modifier_annonce:
+    path:     /modifAnn/{id}
+    defaults: { _controller: AnnonceBundle:Modele:modifier}

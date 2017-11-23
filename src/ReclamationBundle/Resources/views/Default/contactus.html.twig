@@ -1,0 +1,137 @@
+{% extends '::base.html.twig' %}
+
+{% block Title %}
+    Contact Us - Karhabty
+{% endblock %}
+
+{% block Sheets %}
+        {{ parent() }}
+        <!--Bootstrap -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css">
+        <!--Custome Style -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+        <!--OWL Carousel slider-->
+        <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}" type="text/css">
+        <!--slick-slider -->
+        <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
+        <!--bootstrap-slider -->
+        <link href="{{ asset('css/bootstrap-slider.min.css') }}" rel="stylesheet">
+        <!--FontAwesome Font Style -->
+        <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+{% endblock %}
+
+
+{% block PageHeader %}
+
+    <!--Page Header-->
+    <section class="page-header contactus_page">
+        <div class="container">
+            <div class="page-header_wrap">
+                <div class="page-heading">
+                    <h1>Contact Us</h1>
+                </div>
+                <ul class="coustom-breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Dark Overlay-->
+        <div class="dark-overlay"></div>
+    </section>
+    <!-- /Page Header-->
+
+{% endblock %}
+
+{% block Content %}
+
+    <!--Contact-us-->
+    <section class="contact_us section-padding">
+        <div class="container">
+            <div  class="row">
+                <div class="col-md-6">
+                    <h3>Get in touch using the claim form below</h3>
+                    <div class="contact_form gray-bg">
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label class="control-label">the claim's subject <span>*</span></label>
+                                <select  id="list" name="objet" class="form-control white_bg" onselect="choixobjet()">
+                                    <option value="Technique">Technique</option>
+                                    <option value="voiture occasion">voiture occasion</option>
+                                    <option value="voiture neuve">voiture neuve</option>
+                                    <option value="mail publicitaire">mail publicitaire</option>
+                                </select>
+                               <!-- <input type="text" class="form-control white_bg" id="phonenumber" name="objet"> -->
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Description<span>*</span></label>
+                                <textarea class="form-control white_bg" rows="4" name="description"></textarea>
+                            </div>
+
+                            <div class="form-group" >
+                                <label class="control-label" >Upload Images  ( size = 900 x 560 )</label><br>
+                                <div class="form-group" align="center">
+                                    <div class="upload_user_logo" align="center"> <img src="{{ asset('images/dealer-logo.jpg') }}" alt="image">
+                                        <div class="upload_newlogo" align="center">
+                                            <input name="capture" type="file">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br><br><br><br>
+                            <div class="form-group">
+                                    <button class="btn" type="submit" align="center">Send Claim <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Contact Info</h3>
+                    <div class="contact_detail">
+                        <ul>
+                            <li>
+                                <div class="icon_wrap"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                <div class="contact_info_m">PO Box 1025MNO Collins Street West Victoria 8007 Australia</div>
+                            </li>
+                            <li>
+                                <div class="icon_wrap"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                                <div class="contact_info_m"><a href="tel:61-1234-567-90">+61-123-456-789</a></div>
+                            </li>
+                            <li>
+                                <div class="icon_wrap"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                                <div class="contact_info_m"><a href="mailto:contact@exampleurl.com">contact@exampleurl.com</a></div>
+                            </li>
+                        </ul>
+                        <div class="map_wrap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26361315.424069386!2d-113.75658747371207!3d36.241096924675375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1483614660041" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Contact-us-->
+
+
+{% endblock %}
+
+{% block Script %}
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/interface.js') }}"></script>
+
+    <!--bootstrap-slider-JS-->
+    <script src="{{ asset('js/bootstrap-slider.min.js') }}"></script>
+    <!--Slider-JS-->
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/objet.js') }}"></script>
+
+{% endblock %}
+
+
+
+

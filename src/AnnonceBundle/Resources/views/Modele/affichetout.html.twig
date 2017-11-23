@@ -1,0 +1,194 @@
+{% extends '::base.html.twig' %}
+
+{% block Title %}
+    Welcome - Karhabty
+{% endblock %}
+
+    {% block Sheets %}
+        {{ parent() }}
+        <!--Bootstrap -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" type="text/css">
+        <!--Custome Style -->
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
+        <!--OWL Carousel slider-->
+        <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}" type="text/css">
+        <!--slick-slider -->
+        <link href="{{ asset('css/slick.css') }}" rel="stylesheet">
+        <!--bootstrap-slider -->
+        <link href="{{ asset('css/bootstrap-slider.min.css') }}" rel="stylesheet">
+        <!--FontAwesome Font Style -->
+        <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+
+
+    {% endblock %}
+
+
+{% block PageHeader %}
+
+    <!-- Banners -->
+
+    <!-- /Banners -->
+
+{% endblock %}
+
+{% block Content %}
+    <section id="filter_form" class="gray-bg">
+        <div class="section-header text-center">
+            <h1>New Cars Announcements list</h1>
+            <table>
+                <thead>
+                <tr>
+                    <td> Title</td>
+                    <td> Category</td>
+                    <td> City</td>
+                    <td> Description</td>
+                    <td> Price</td>
+                    <td>Image(s)</td>
+                    <td>Want More ?</td>
+                </tr>
+                </thead>
+                {% for modele in modeles %}
+                    {% if(modele.garantie != null) %}
+                        <tbody>
+                        <tr>
+                            <td>{{ modele.titre }}</td>
+                            <td>{{ modele.categorie }}</td>
+                            <td>{{ modele.ville }}</td>
+                            <td>{{ modele.description }}</td>
+                            <td>{{ modele.prix }}</td>
+                            <td><img src="{{ asset('images/Oussama/') ~ modele.image }}"></td>
+                            <td>
+                                <a href="#" class="btn">Read More <span class="angle_arrow"><i class="fa fa-angle-right"
+                                                                                               aria-hidden="true"></i></span></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+
+    <section id="filter_form" class="gray-bg">
+        <div class="section-header text-center">
+            <h1>Old Cars Announcements list</h1>
+            <table>
+                <tr>
+                    <td> Title</td>
+                    <td> Category</td>
+                    <td> City</td>
+                    <td> Description</td>
+                    <td> Price</td>
+                    <td>Image(s)</td>
+                    <td>Want More ?</td>
+                </tr>
+                {% for modele in modeles %}
+                    {% if(modele.garantie == null) %}
+                        <tr>
+                            <td>{{ modele.titre }}</td>
+                            <td>{{ modele.categorie }}</td>
+                            <td>{{ modele.ville }}</td>
+                            <td>{{ modele.description }}</td>
+                            <td>{{ modele.prix }}</td>
+                            <td><img src="{{ asset('images/Oussama/') ~ modele.image }}"></td>
+                            <td>
+                                <a href="#" class="btn">Read More <span class="angle_arrow"><i class="fa fa-angle-right"
+                                                                                               aria-hidden="true"></i></span></a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+
+    <!--End of Wrap -->
+
+
+    <!--Start of Modal -->
+
+    <!-- /Fun Facts-->
+
+
+
+
+    <!--Trending Car-->
+    <section class="section-padding gray-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Trending <span>Cars of the Year</span></h2>
+                <p></p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="trending_slider">
+                        <div class="trending-car-m">
+                            <div class="trending-car-img"><img src="{{ asset('images/trending-car-img-1.jpg') }}"
+                                                               alt="Image" class="img-responsive"/></div>
+                            <div class="trending-hover">
+                                <h4><a href="#">Ford Shelby GT350</a></h4>
+                            </div>
+                        </div>
+                        <div class="trending-car-m">
+                            <div class="trending-car-img"><img src="{{ asset('images/trending-car-img-2.jpg') }}"
+                                                               alt="Image" class="img-responsive"/></div>
+                            <div class="trending-hover">
+                                <h4><a href="#">Toyota Corolla</a></h4>
+                            </div>
+                        </div>
+                        <div class="trending-car-m">
+                            <div class="trending-car-img"><img src="{{ asset('images/trending-car-img-3.jpg') }}"
+                                                               alt="Image" class="img-responsive"/></div>
+                            <div class="trending-hover">
+                                <h4><a href="#">Volvo v40</a></h4>
+                            </div>
+                        </div>
+                        <div class="trending-car-m">
+                            <div class="trending-car-img"><img src="{{ asset('images/trending-car-img-1.jpg') }}"
+                                                               alt="Image" class="img-responsive"/></div>
+                            <div class="trending-hover">
+                                <h4><a href="#">Toyota Corolla</a></h4>
+                            </div>
+                        </div>
+                        <div class="trending-car-m">
+                            <div class="trending-car-img"><img src="{{ asset('images/trending-car-img-2.jpg') }}"
+                                                               alt="Image" class="img-responsive"/></div>
+                            <div class="trending-hover">
+                                <h4><a href="#">Mazda CX-5 SX, V6, ABS</a></h4>
+                            </div>
+                        </div>
+                        <div class="trending-car-m">
+                            <div class="trending-car-img"><img src="{{ asset('images/trending-car-img-3.jpg') }}"
+                                                               alt="Image" class="img-responsive"/></div>
+                            <div class="trending-hover">
+                                <h4><a href="#">BMW 535i</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Trending Car-->
+
+
+
+{% endblock %}
+
+{% block Script %}
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/interface.js') }}"></script>
+    <!--bootstrap-slider-JS-->
+    <script src="{{ asset('js/bootstrap-slider.min.js') }}"></script>
+    <!--Slider-JS-->
+    <script src="{{ asset('js/slick.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+{% endblock %}
+
+
+
+

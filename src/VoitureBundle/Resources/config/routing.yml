@@ -1,0 +1,3 @@
+voiture_homepage:
+    path:     /
+    defaults: { _controller: VoitureBundle:Default:index }

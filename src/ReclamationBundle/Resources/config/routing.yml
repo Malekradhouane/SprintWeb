@@ -1,0 +1,15 @@
+reclamation_homepage:
+    path:     /
+    defaults: { _controller: ReclamationBundle:Default:index }
+reclamation_contactus:
+    path:     /recfront
+    defaults: { _controller: ReclamationBundle:Rec:ajoutRec }
+reclamation_back:
+    path:     /recback
+    defaults: { _controller: ReclamationBundle:Rec:AffichageRec }
+reclamation_affback:
+    path:     /recAffback/{id}
+    defaults: { _controller: ReclamationBundle:Rec:AffRec }
+reclamation_Suppback:
+    path:     /supback/{id}
+    defaults: { _controller: ReclamationBundle:Rec:SupprimerRec }

@@ -1,0 +1,3 @@
+karhabty_homepage:
+    path:     /
+    defaults: { _controller: KarhabtyBundle:Default:index }

@@ -1,0 +1,21 @@
+<h1>New Cars Announcements list</h1>
+<table border="1">
+    <tr>
+        <td> Title</td>
+        <td> Category</td>
+        <td> City</td>
+        <td> Description</td>
+        <td> Price</td>
+        <td>Image(s)</td>
+    </tr>
+    {% for annonce in annonce %}
+            <tr>
+                <td>{{ annonce.titre }}</td>
+                <td>{{ annonce.categorie }}</td>
+                <td>{{ annonce.ville }}</td>
+                <td>{{ annonce.description }}</td>
+                <td>{{ annonce.prix }}</td>
+                <td>{{ annonce.image }}</td>
+            </tr>
+    {% endfor %}
+</table>

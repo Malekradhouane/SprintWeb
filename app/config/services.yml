@@ -1,0 +1,8 @@
+services:
+    app.form.registration:
+        class: KarhabtyBundle\Form\RegistrationType
+        tags:
+            - { name: form.type, alias: app_user_registration }
+    redirect.after.login:
+        class: TemplateBundle\Entity\AfterLoginRedirection
+        arguments: ['@router']
